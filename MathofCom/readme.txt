@@ -1,0 +1,1 @@
+此处香农的《A Mathematical Theory of Communication》一文的翻译者是贾洪峰，资料来源于图灵社区“https://www.ituring.com.cn/book/1185”
