@@ -16,12 +16,17 @@ email：cy_lxf@163.com
 
 ## 翻译的论文列表
 
+### 1924 Certain Factors Affecting Telegraph Speed  Nyquist
+#### 状态：等待领养
+#### 介绍
+
+#### 目录：CertainFactosAffTeleSpeed
+
 ### 1948 A Mathematical Theory of Communication， C. E. SHANNON
 
 #### 状态：完成
 
 #### 介绍 
-
 
 #### 目录：MathofCom
 
