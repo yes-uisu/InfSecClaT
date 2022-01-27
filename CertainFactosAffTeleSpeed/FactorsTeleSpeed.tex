@@ -1,0 +1,151 @@
+\documentclass{hfutpaper}
+\usepackage[urlcolor=blue]{hyperref}
+\usepackage{threeparttable}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{float}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\usepackage{fancyhdr}
+\titleformat{\section}{\large \heiti}{\chinese{section}、}{0em}{}
+\begin{document}
+\begin{center}
+\LARGE
+  \textbf{影响电报通信的几个因素}\footnote{Presented at the Midwinter Convention of the A. I. E. E., Philadelr.hia. Pa.	February 4-8, 1924, and reprinted from the Journal of the A. I. E. E. \ 01. 43, p.124,1924.}\\
+  \vspace{0.2em}
+  \large
+    作者：H. Nyquist \\
+    
+  {\small 译者：李晓峰}\footnote{译者注：来自于网络空间安全经典论文翻译项目\url{https://gitee.com/uisu/InfSecClaT}}\\
+  {\small (北京联合大学智慧城市学院,cy\_lxf@163.com)}\\
+  
+  \end{center}
+\rule[0.1\baselineskip]{\textwidth}{0.5pt}
+\textbf{梗 \ 概}\\
+\large
+本文考虑了影响电报情报传输速度的两个基本因素。这些因素是信号成形和编码选择。第一个是关于施加在传输介质上的最佳波形，以便在涉及的电路中不产生过度干扰的情况下实现更高的速度，后者涉及的是编码的选择，允许在给定数量的信号元素下传输最大量的情报。\\
+结果表明，波形在一定程度上取决于传输情报的电路类型，在大多数情况下，最佳波形既不是矩形波，也不是经常使用的半周期正弦波，而是通过适当的网络发送简单矩形波产生的特殊形式的波。通常与电报电路有关的阻抗在施加矩形电压波时会产生相当程度的信号成形(塑造)。\\
+对编码选择的考虑表明，虽然使用涉及两个以上电流值的代码是可取的，但存在一些限制，阻止使用多个电流值。通过比较，给出各种编码的相对速度效率。结果表明，斯奎尔等人\footnote{
+	A. C. Crehore and G. O. Squier. "A Practical Transmitter Using the Sine	Wave for Cable Telegraphy; and Measurements with Alternating Currents upon an Atlantic Cable." A. I. E. E. Trans., Vol. XVII, 1900, p. 385.\\
+	G. O. Squier. "On An Unbroken Alternating Current for Cable Telegraphy."
+	Proc. Phys, Soc., Vol. XXVII, p, 540.\\
+	G. O. Squier. "A Method of Transmitting the Telegraph Alphabet Applicable
+	for Radio, Land Lines, and Submarine Cables." Franklin Inst., Jl., Vol. 195, May
+	1923, p. 633.
+}提出的使用正弦波进行电报传输没有任何好处，他们的论点基于错误的假设。
+\\
+\rule[0.1\baselineskip]{\textwidth}{0.5pt}
+\section{信号成形}
+
+\section{在无失真线路上的直流电报传输}
+
+\section{载波与无线电}
+
+
+\section{陆上线路}
+
+\section{海底电缆}
+
+\section{编码的选择}
+
+\section{(翻译完成)用不同数量电流值编码的理论可能性}
+在一个给定了线速的电报电路(例如给定发送信号元的速度)上传输情报的速度大致如以下公式，这个公式的推导见附录B
+\[W=K\log{m}\]
+此处W是情报传输速度，m是电路值的数目，K是常数。\par
+
+情报传输速度是指字符数，表示不同字母、数字等，假设电路每单位时间传输给定数量的信号元素，则可以在给定的时间长度内传输这些字符。
+
+
+用下表中的数值代入该公式，说明通过增加电流值的数目来加速情报传输的可能性。
+\footnote{译者注：\\
+	我们计算此表中的K，可以看出其确实是一个常数，下面是分别以e、10、2为底时，计算所得的K
+	\\
+	\begin{tabular}{|c|c|c|c|}
+		\hline 
+		电流值数目&$K=\frac{W}{\log{m}}$,e为底  & $K=\frac{W}{\log{m}}$,10为底 & $K=\frac{W}{\log{m}}$,2为底 \\ 
+		\hline 
+		2& 144.27 & 332.19 & 100 \\ 
+		\hline 
+		3& 143.82 & 331.15 & 99.69 \\ 
+		\hline 
+		4& 144.27 & 332.19 & 100 \\ 
+		\hline 
+		5& 144.91 & 329.06 & 99.06 \\ 
+		\hline 
+		8& 144.27 & 332.19 & 100 \\ 
+		\hline 
+		16   & 144.27 & 332.19 & 100 \\ 
+		\hline 
+	\end{tabular} 
+}
+\par
+\begin{table}
+	\centering
+	\begin{tabular}{|p{3cm}<{\centering} | p{5cm}<{\centering} |}
+		\hline 
+		电流值数目&  在给定信号元数目下可以传输相对情报量\\ 
+		\hline 
+		2& 100 \\ 
+		\hline 
+		3& 158 \\ 
+		\hline 
+		4& 200 \\ 
+		\hline 
+		5& 230 \\ 
+		\hline 
+		8& 300 \\ 
+		\hline 
+		16& 400 \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+\par
+这个表表明，在电路允许的情况下，以及在线路速度不会因此降低的情况下，多于两个以上的电流值具有相当大的优势。下文将概述这些限制。还应注意的是，虽然电流值的数量适度增加有相当大的优势，但大量增加几乎没有优势。
+\footnote{译者注：此处的电流值其实就是编码的基数，也就是一个信号有几个状态。比如二进制，就是两个状态。}
+\par
+
+
+\section{目前通常使用的编码————与理想情况比较}
+
+\section{多于两个电流值编码限制}
+
+\section{正玄波系统}
+
+\appendix
+
+\section{附录A}
+
+\section{(翻译完成)附录B}
+我们已经使用了这个公式
+\[W=K \log{m} \]
+此处：\\
+W=情报的传输速度\\
+K=一个常数\\
+m=使用的电流值的数目\\
+
+下面将给出这个公式的推导和所依赖的假设。
+\par
+
+假定有一种编码，这种编码的字符都有相同的持续时间，打印机编码通常是这种情况，如果n是组成每个字符的信号元数目，那么可以构造的字符数目为$m^n$。为了使这两个系统等效，可以区分的字符总数应该相同。 换句话说：\footnote{译者注：这里是在说，对于一个通信系统来说，可以传输的编码字符数是一定的，也就是一个常数。}
+\[m^n=constant  \hspace{2cm}(1)\]
+这个等式可以写成
+\[n\log{m}=constant \hspace{2cm}(2)\]
+
+在电路上传输情报的速度与线路速度成正比，与每字符信号元数目成反比，同时满足上述关系。所以，我们可以写出
+\[W=s/n  \hspace{2cm}(3)\]
+此处s是线路速度，替换上面方程中的n，方程变为\footnote{译者注：W是情报传输的速度}
+\[W=\frac{s\log{m}}{constant}  \hspace{2cm}(4))\]
+也可以写为
+\[W=K\log{m}  \hspace{2cm}(5)\]
+\par
+在将该公式应用于实际情况时，将发现不可能严格遵守方程式(1)所表示的条件。\par
+我们这里看一个例子，考虑一种三个电流值的编码和一种两个电流值的编码，在此例中，三个电流值编码中每个字符由三个信号元组成，两个电流值编码中的每个字符\footnote{译者注：在原文中是element，而非character，通过上下午比较，应该是作者笔误，应该是character}由五个信号元组成。很明显，对于字符传输速度来说，三电流编码方案是两电流编码方案的$\frac{5}{3}$，换句话说，其速度比\footnote{译者注：}为1.67:1，而公式给出的比率为\footnote{译者注：按照情报速$W=K\log{m}$,我们有情报传输速度之比为$\log{3}/\log{2}=1.58496$}1.58:1。三电流方案有27个字符，两电流方案有32个字符，换句话说，两电流方案中一个字符比三电流方案中一个字符传输了更多情报，所以1.67字符传输的相对速度和1.58情报传输的相对速度并不具有可比性。\par
+
+需要注意的是，该公式是编码中的字符具有统一持续时间这一条件下推导的，并且不期望它适应任何情况，但是对于字符持续时间不一致的编码可以是一个近似。 为了建立后一种情况\footnote{译者注：这种情况就是指每个字符持续时间不一致的情况。}的公式，有必要对各种字符的相对频率进行假设。
+似乎有理由认为，公式在这种情况下与事实相当接近，但不应期望它是准确的。
+
+\section{附录C}
+
+\section{附录D}
+
+
+\end{document} 

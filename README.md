@@ -17,22 +17,33 @@ email：cy_lxf@163.com
 ## 翻译的论文列表
 
 ### 1924 Certain Factors Affecting Telegraph Speed  Nyquist
-#### 状态：等待领养
+#### 状态：等待领养，翻译部分
 #### 介绍
+这是Nyquist在1924年写的一篇文章，这篇文章的动人之处在于其总结出了情报的传输速度和情报具体表达方式之间的关系w=k* log(m),其中w是情报的传输速度，m是用来表示情况的可区分（可用）电流值。
 
 #### 目录：CertainFactosAffTeleSpeed
 
+### 1928 Transmission of Information,R. V. L. Hartley
+
+#### 状态：等待领养，翻译部分
+#### 介绍
+这是Harlty在1928年的一篇文章，这篇文章之所以重要，是其给出了信息的度量公式H=n*log(s)，香农采用了这种信息度量方式，并就通信的数学原理和保密原理展开系统的讨论。
+
+#### 目录：TransOfInformation
+
 ### 1948 A Mathematical Theory of Communication， C. E. SHANNON
 
-#### 状态：完成
+#### 状态：完成（翻译者不详），翻译结果不太满意，等待重塑！！！
 
 #### 介绍 
+在网上找了一份翻译稿，不知翻译者是谁，故没有标注翻译者。
+
 
 #### 目录：MathofCom
 
 ### 1949 Communication Theory of Secrecy Systems，C. E. Shannon
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 #### 介绍 
 
 
@@ -40,7 +51,7 @@ email：cy_lxf@163.com
 
 #### 1976 New Directions in Cryptography，WHITFIELD DIFFIE AND MARTIN E. HELLMAN
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 #### 介绍 
 
 
@@ -48,7 +59,7 @@ email：cy_lxf@163.com
 
 ### 1977 Probabilistic Computations: Toward a Unified Measure of Complexity，Andrew Chi-Chih Yao
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 #### 介绍 
 
 
@@ -57,7 +68,7 @@ email：cy_lxf@163.com
 
 ### 1978 A Method for Obtaining Digital Signatures and Public-Key Cryptosystems，R.L. Rivest, A. Shamir, and L. Adleman 
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 
 #### 介绍 
 
@@ -67,7 +78,7 @@ email：cy_lxf@163.com
 
 ### 1978 ON DATA BANKS AND PRIVACY HOMOMORPHISMS，Ronald L. Rivest，Len Adleman，Michael L. Dertouzos
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 
 #### 介绍 
 
@@ -99,7 +110,7 @@ email：cy_lxf@163.com
 
 ### 1982 Theory and Applications of Trapdoor Functions，Andrew Chi-Chih Yao
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 
 #### 介绍 
 
@@ -110,7 +121,7 @@ email：cy_lxf@163.com
 
 ### 1983 On the security of public key protocols，Dolev, Danny and Andrew Chi-Chih Yao
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 
 #### 介绍 
 
@@ -121,7 +132,7 @@ email：cy_lxf@163.com
 
 ### 1986 How to Generate and Exchange Secrets，Andrew Chi-Chih Yao
 
-#### 状态：等待翻译者
+#### 状态：等待领养
 
 #### 介绍 
 
