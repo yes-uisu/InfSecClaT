@@ -10,7 +10,10 @@
 希望有兴趣的参与进来，我们一起完成这个工作。论文状态是“等待翻译者”“进行中”均可加入，如果已完成翻译的文档，需要完善修改，也可以告诉我。
 
 
-QQ:3093083538 加我QQ时备注“InfSecClaT”
+QQ:3093083538 
+微信：l761628
+
+加我QQ和微信时备注“InfSecClaT”
 
 email：cy_lxf@163.com
 
@@ -97,6 +100,16 @@ email：cy_lxf@163.com
 #### 目录：ComplexityQuestionsRelated2DC
 
 
+### 1982 Probabilistic Encryption & How To Play Mental Poker Keeping Secret All Partial Information
+
+#### 状态：等待领养
+
+#### 介绍 
+
+
+#### 目录：ProEncryption(82)
+
+
 
 ### 1982 Protocols for Secure Computations，Andrew Chi-Chih Yao
 
@@ -129,6 +142,16 @@ email：cy_lxf@163.com
 #### 目录：SecOfPublicKeyProtocolYao
 
 
+### 1984 Probabilistic Encryption 
+
+#### 状态：等待领养
+
+#### 介绍 
+
+
+#### 目录：ProEncryption(84full)
+
+
 
 ### 1986 How to Generate and Exchange Secrets，Andrew Chi-Chih Yao
 
@@ -138,6 +161,16 @@ email：cy_lxf@163.com
 
 
 #### 目录：GenExSecrets
+
+
+### 1997 A Concrete Security Treatment of Symmetric Encryption
+
+#### 状态：简写版翻译完成，带定理证明的完整版待领养
+
+#### 介绍 
+
+
+#### 目录：ConcreteSecurityTreatment
 
 
 
