@@ -76,7 +76,7 @@ $\geq C_T2^{2^n}$。然后，我们将考虑到，对于公式大小$n\approx 10
 	将$l(a)$定义为$\beta$在$q_n(a)$上的预期长度。设$p_n(\alpha)=p_n(x_1)p_n(x_2)\ldots p_n(x_{n^k}) $。设$l_n(\mathcal{M};S)=\sum_{\alpha}p_n(\alpha)l_n(\alpha)/n^k$,这是$\mathcal{M}$用于编码$S_n$的输出符号$x$的平均比特数。
 \end{definition}
 
-\textbf{Remark:}\hspace{0.5cm}
+\textbf{Remark:}\hspace{0.5cm}性质（a）和（B）规定编码和解码可以在多项式计算时间内完成，并且错误率为O（V（n））。性质（C）粗略地指出，在发送源$S_n$的$u\cdot n^k$输出的意义上，该代码是唯一可破译的编码，可以分别对每个$n^k$段进行编码，然后连接成用于传输的$u$个块。
 
 
 \begin{definition}
@@ -91,10 +91,33 @@ $\geq C_T2^{2^n}$。然后，我们将考虑到，对于公式大小$n\approx 10
 	我们说有效熵(effective entropy) $H_c(S)$小于$g(n)$，即,$H_c(S)\leq g(n)$,如果存在$t,k>0$和$S$的$(t,k)-entropy$序列$<w_n>$，对于足够大的n，有$w_n\leq g(n)$.
 \end{definition}
 
+同样，我们写$H_c(S)\leq h(n)$,如果对于每个固定的$t,k>0$，每个$S$的$(t-k)-entropy$序列$<w_n>$,当$n$足够大时，
+满足$w_n\geq h(n)$，我们将使用符号$H_c(S)=O(g(n)),\Omega(h(n)),\Theta(f(n))$等。
+
+
+因此，我们的术语“集成源的有效熵”(effective entropy of a source ensemble)的精神与我们谈论“决策问题的计算复杂性”(the computational complexity of a decision problem)的精神相同；两者都不是一个定义明确的量，但可以作为一个有用的助手。然而，在某些情况下，上界和下界足够紧，可以写出诸如$H_c(S;n)=g(n)+O(logn)$的等式。一个重要的情况是集成源(source ensemble)对应于随机数。
+
 
 \begin{definition}
 	真随机数ensemble $\tau_0$是source ensemble $S_1,S_2,\ldots$，此处，当$|x|=n$时，$S_n$的概率分布为$p_n(x)=2^{-n}$;$|x|\neq n$时,概率为0.
 \end{definition}
+
+\begin{theorem}
+	对于任一source ensemble $S$，$H_c(S;n)\geq H(S_n)+O(v(n))$。
+\end{theorem}
+
+
+\vspace{0.5cm}
+\textbf{推论}：$H_c(\tau_0;n)=n+O(v(n))$.
+\vspace{0.5cm}
+
+
+
+$O(v(n))$出现在上述定理中，因为我们在定义2中允许$O(v(n))$错误概率。推论中等式的形式具有特殊意义，这个意义将在第5节中变得清晰。
+
+是否存在有效熵远大于香农熵的source ensemble？答案是肯定的。设$g(n)$是任意趋于无穷大的单调函数，且$(log_2 n)^2< g(n)<n$.
+
+\textbf{例2：}下面的source ensemble $S=S_1,S_2,\ldots$可以证明具有$H(S_n)=g(n)$,而$H_c(S;n)=n+O(v(n))$。令$\alpha_1,\alpha_2,\ldots$是二进制串序列，其中$\alpha_n$具有长度$n2^{g(n)}$并且具有最大Kolmogroff-Chaitin信息[6][14]。$\alpha_n$写为$\alpha_{n1}\alpha_{n2}\ldots\alpha_{nG(n)}$，其中$G(n)=2^{g(n)}$，$|a_{ni}|=n$；设$S_n$由$p(x)=2^{-g(n)}$定义，如果对于某个$i$，$x=a_{ni}$，否则为0。事实上，使用算法信息的相对化版本（由Levin定义），修改上述定义从而构造$S$并不困难。
 
 \subsection{可靠传输(reliable transmission)}
 
@@ -141,6 +164,61 @@ $\geq C_T2^{2^n}$。然后，我们将考虑到，对于公式大小$n\approx 10
 
 
 \subsection{一种伪随机数理论(a theory of pesudorandom numbers)}
+
+\begin{definition}
+	一个sourc ensemble $S=<p_n>$是均匀的，如果对于所有长度为$\xi(n)$的串$x$，其概率为$p(x)>0$，进一步，对于所有$n$，有$\xi(n)<\xi(n+1)$，我们称$\xi(n)$是$S$的长度函数。
+\end{definition}
+
+为了简化，接下来的章节，我们假设字母表为$\{0,1\}$,根据定义，对于$t_1,t_2>0$有$n^{t_1}<\xi(n)<n^{t_2}$。
+
+
+设$\xi(n)$是整值函数(integral-valued function),且$\xi(n)<\xi(n+1)$.将$\tau_\xi$定义为source ensemble $<S_n>$，其中$S_n$是对应于$\xi-bit$随机数的源。
+
+
+\begin{definition}
+	一个均匀的source ensemble $S$，有长度函数$\xi(n)$，如果$S$和$\tau_\xi$是不可区分的，称$S$是完美的(perfect).
+\end{definition}
+
+
+
+\begin{definition}
+	一个多项式统计测试(polynomial statistical test )是一个概率算法$M$，此概率算法仅有输入形式为$(x_1,x_2,\ldots,x_{N^k})$，
+	此处每个$x_i$都是一个$n$比特数，算法在$O(N^t)$时间内停止，并且输出一个二进制串$y$,此处$t,k$是固定的正整数。
+\end{definition}
+
+
+\begin{definition}
+	在上面的定义中，设$\eta(N,y)$是当输入$x_i$是独立的N比特数时，输出$y$的概率。对任一有长度函数$\xi$的均匀source ensemble $S$，设$\eta_M(N,y;S)$是输入$x_i$由源$S$产生，输出$y$的概率，此处$N=\xi(n)$。(对于某个$n$，仅当$N=\xi(n)$时，$\eta_M(N,y;S)$有定义)
+\end{definition}
+
+
+\begin{definition}
+	设$M$是一个多项式统计测试，$S$是一个均匀source ensemble，我们说$S$通过统计测试$M$,如果对于所有$y$，$\eta_M(N,y;S)-\eta_M(N,y)=O(v(N))$.
+\end{definition}
+
+\begin{theorem}
+	一个均匀的source ensemble $S$是完美的(perfect)，当且仅当$S$通过每一个多项式统计测试。
+\end{theorem}
+
+
+\begin{theorem}
+	一个均匀的source ensemble $S$是完美的(perfect)，当且仅当$H_c(S;n)=n+O(v(n))$.
+\end{theorem}
+
+
+\begin{definition}
+	伪随机数发生器(pseudorandom number generator)$G$是一种概率算法，例如，给定输入整数$k$和$n$，它满足：\\
+	(a)在n的多项式时间内停止;\\
+	(b)使用$O(n)$个真随机位，且\\
+	(c)输出长度为$n^k$的二进制串$\alpha$.
+\end{definition}
+
+对于每个$K$，上述生成器$G$定义了自然source ensembel $W_k(G)=<S_n>$，其中$S_n$是输出$\alpha$(长度为$n^k$)的源,具有与$G$相同的概率（当$n$是输入时）。
+
+\begin{definition}
+	一个伪随机数发生器$G$是完美的(perfect)，如果对于每一个固定的$k$，$W_k(G)$是一个完美source ensemble。
+\end{definition}
+
 
 \subsection{相互信息和独立性(mutual information and independence)}
 
