@@ -5,5 +5,7 @@ exclude:
 
 # 限制构建范围
 include:
-  - "index.md"
+  - "index.html"
   - "README.md"
+  - "portfolio.html"
+  - "about.html"
