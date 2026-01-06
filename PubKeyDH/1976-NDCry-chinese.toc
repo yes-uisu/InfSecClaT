@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {I}引言}{1}{section.1}%
+\contentsline {section}{\numberline {II}传统密码体系}{3}{section.2}%
+\contentsline {section}{\numberline {III}公钥密码体系}{8}{section.3}%
+\contentsline {section}{\numberline {IV}单向认证}{12}{section.4}%
+\contentsline {section}{\numberline {V}问题的相互关系和陷门}{12}{section.5}%
+\contentsline {section}{\numberline {VI}计算复杂度}{12}{section.6}%
+\contentsline {section}{\numberline {VII} 历史背景/历史观点}{12}{section.7}%

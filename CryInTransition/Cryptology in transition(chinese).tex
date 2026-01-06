@@ -1,0 +1,218 @@
+\documentclass[]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newtheorem{theorem}{Theorem}
+\renewcommand{\thesection}{\Roman{section}}
+
+%opening
+\title{转变中的密码学\\
+Cryptology in Transition}
+\author{ABRAHAM LEMPEL, \\
+\small{Department of Electrwal Engmeertng, Technton--Israel Instttute of Technology, Hatfa, Israel}
+{\small  翻译：李晓峰(cy\_lxf@163.com)}\footnote{译者目前为北京联合大学智慧城市学院信息安全老师。}\footnote{译文来自于经典文献翻译项目https://gitee.com/uisu/InfSecClaT,欢迎大家加入经典翻译项目，为更多的人能够获取这些经典文献所传递信息做一点贡献。}\\
+{\small  V1.0}
+}
+
+\usepackage{hyperref} %生产书签
+
+\begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		本综述的重点是最近提出的实现方案，以及与密码复杂性
+		有关的公钥密码系统问题的新概念。此外，还简要概述了经典密码学，当今密码学的基本原则，以及现在官方
+		的DES加密标准。
+	\end{abstract}
+
+	\section*{前言}
+	这项工作旨在向读者传达公钥密码学目前
+	所处的过渡阶段和不断发展的技术状态。
+	这种过渡是多方面的:在相关范围内，它
+	已经从处理军事和外交通信的政府垄断演
+	变为一般商业的主要关注，特别是银行业，
+	以及最近的广大公众。它的技术已经从纸
+	笔和各种机械设备扩展到大型、高速的电
+	子计算机。它的安全重点也从统计的不确
+	定性转变为计算的复杂性。最后，但并非
+	最不重要的是，在概念上它已经从传统的
+	pri- vat -key 方案发展到公钥密码系统——
+	提供即时隐私和双向认证的术语。
+	
+	\section*{引言}
+	
+	\section{古典密码}
+	
+	\subsection{凯撒密码}
+	
+	\subsection{简单替换}
+	
+	\subsection{多字母密码}
+	
+	\subsection{换位密码}
+	
+	\subsection{乘积密码}
+	
+	\section{现代密码的基本原理}
+	
+	\subsection{流密码}
+	
+	\subsection{分组密码}
+	
+	\subsection{DES}
+	
+	\section{公钥密码}
+	
+	\subsection{Rivest-Shamir-Adleman(RSA)方案}
+	
+	\subsection{Merkel-Hellman(MH)方案}
+	
+	\subsection{McEliece方案}
+	
+	\subsection{Graham-Shamir(GS)方案}
+	
+	\subsection{纯签名方案}
+	
+	\section{错综复杂的密码复杂度}
+	
+	\subsection*{例子：一个容易破解的NP-完全的密码}
+	这个例子是由作者 Shimon Even 和 Yacov
+	Yacobi 共同推导出来的。它演示了一个密
+	码，即使在选择的明文攻击下，破解其密
+	钥的问题也是NP-完全的。然而，给定足
+	够的已知明文，以接近1的概率，可以将破解
+	密钥规约为在 n 个未知数中求解 n 个
+	独立线性方程的简单问题，其中 n 是密钥
+	位的数量。\par
+	
+	
+	该方案是一种传统的私钥分组密码，其
+	总体结构如图 1 所示。密钥长度为 n 位 ，
+	$K = (x_l x_2 \ldots  x_n)$ ， 消息是长度为 m 的二进
+	制块，其中 $m = [log_2(1 + \sum_{j=1}^{n} a_j)]$， $A =
+	(a_l a_2 \ldots a_n) $是一个任意的具有正整数分量
+	$a_j$的背包，假设密码分析者知道。要获
+	得消息 M 的密文 C，请按照以下步骤
+	进行:\par
+	
+	\begin{itemize}
+		\item 在本地生成一个特别随机(ad hoc random)二进制向量R;
+		\item 计算$s=A(K\oplus R)^T$;
+		\item 集合$C=(M\oplus S,R)$,此处$S=binary(s)$
+	\end{itemize}
+	
+	注意密文长度是$m+n$，$M\oplus S$的$m$位后面跟着$R$的$n$位，并且对于每个
+	$m$ 生成一个新的 $R$。解密也很简单:因为合法
+	的接收者知道 $K$，他可以把 $K$ 加到接收到的
+	$R$中，计算出 $s$，从中他可以得到$S$，从而得
+	到 $M$。\par
+	
+	从密码分析者的角度来看，最糟糕的情
+	况是，对于他所有已知的明文，特设向量(ad hoc vector)
+	R 保持不变。然后，在已知和选择明文攻
+	击下，破解密钥需要解决方程 $s=A(K\oplus R)^T$,给定 s, A 和 R 求 K。当然，这相
+	当于解决NP-完全的背包问题。\par
+	
+	一个可能性更大的事件是，给定足够多
+	的已知明文，密码分析师将有 n 对 $(M_i,C_i)$ ，
+	其中 $C_i= (M_i\oplus S_i, R_i)$ ， $i = 1,2 \ldots n$，
+	使得 n 个向量 $U_i = 1^n- 2R_i$在实数上是线性
+	无关的($1^n$ 是 n 个 l的向量)。对于每一个 $i= 1,2,\ldots ,M$，我们有
+	\[K\oplus R_i=K+R_i-2(K * R_i)\]
+	其中*表示分量乘法(componentwise multiplication)。因此：
+	\[K\oplus R_i=R_i+K * U_i\]
+	并且
+	\begin{align*}
+		s_i & =A(K\oplus R_i)^T\\
+	        & =A(R_i+K*U_i)^T\\
+	        & =AR_i^T+A(K*U_i)^T\\
+	        & =AR_i^T+(U_i*A)K^T
+	\end{align*}
+	
+	
+	令$t_i=s_i-AR_i^T$,将 n 个方程写成矩阵形式，我们得到
+	
+	\begin{equation*}
+		\begin{bmatrix}
+		t_1 \\
+		t_2 \\
+		\dots \\
+		t_n
+		\end{bmatrix}=
+		\begin{bmatrix}
+		U_1 \\
+		U_2 \\
+		\dots \\
+		U_n
+		\end{bmatrix}
+		\begin{bmatrix}
+		a_1 & 0 & \dots &0 \\
+		0 & a_2 & \dots &0 \\
+		\dots & \dots & \dots &\dots \\
+		0 & 0 & \dots &a_n \\
+		\end{bmatrix}
+		\begin{bmatrix}
+		x_1 \\
+		x_2 \\
+		\dots \\
+		x_n
+		\end{bmatrix}
+	\end{equation*}
+	
+	由于 $U_i$是独立的，并且对于所有 $j$ 都有
+	$a_j> 0$，可以很容易地解出密钥分量$x_i$。
+	可以证明(见 LEMP78，附录 1)$N\geq n$ 对
+	$(M, C)$产生 $n$ 个线性无关的 $U$, 对于 $N = n$的概率下
+	界约为$1/3$;当 $N = n + 1$ 时，下
+	界加倍，随着 $N - n$ 的增加，下界迅速趋
+	近于 1。\par
+	
+	
+	这个例子并不是要以任何方式减损作为加密方案基础的难题的
+	潜在有用性。我们的目的只是提醒读者，
+NP-完备的复杂性度量，以及在 NPC类
+	中困难问题的公认难度并未解决，就加密
+	复杂性而言可能超出了上面复杂度的上下文。通过将
+	Merkle-Hellman 方案与我们的示例进行比
+	较，进一步强调了所涉及的复杂性。这两
+	种方案都是基于背包问题，虽然还不清楚
+	破解MH方案是否是NPC，但我们的例子
+	中的方案肯定是这样的。然而，破解后者
+	非常简单，而破解 MH 方案的可行方法尚
+	未找到。\par
+	
+	还应该指出，示例方案的大部分(如果不
+	是全部)弱点是由于 $C$ 对 $M$ 的线性依赖。
+	长期以来，密码中的线性一直被认为是密
+	码学家的诅咒和密码分析者的福音。我们在第 3 节的
+	末尾讨论了这个问题，就是具有某种线性的方案中的隐私和身份
+	验证之间的权衡时。\par
+	
+	很容易修改我们示例的方案，使其密码
+	分析像任何已知的一样困难。例如，可以
+	用 $M^s \pmod{pq}$ 代替 $M \oplus S$ ，就像在 RSA 方
+	案中一样，或者用 DES(M, S)代替$M \oplus S$，
+	也就是说，通过将 DES 方案应用于 M, 而 S
+	作为 DES 密钥。我们不提这一点，
+	是为了提出另一个方案，其难解性是一个
+	猜想问题。如前所述，我们认为需要的是
+	努力建立一些在密码复杂性背景下真正有
+	效的标准，然后才尝试发明符合这些标准
+	的方案。正如 RABI77 中所指出的那样，
+	我们离实现这一目标还很遥远。
+	
+	\section*{致谢}
+	作者很高兴地感谢我在准备这项调查时得到的帮助。
+	特别感谢Martin Cohn在内容和风格上
+	提 供 的 宝 贵 帮 助 ， 感 谢 Martin 	Hellraan 帮 助 修 改Sperry的原 始报 告， 并感 谢
+	Ron Graham 和Adl Shamir 允许描述他们的未发表的方案。
+	作者也感谢与Len Adleman,Shimon Even,Leland Gardner,Martin Hellman, Ralph Merkle, Nick Plppenger, Michael Rabin,
+	Ron Rivest, Adi Shamir, Ned Sloane, Shmuel Wmograd, and Yacob Yacobi 的有益讨论
+	
+	\section*{参考文献}
+    \par
+\end{document}
+

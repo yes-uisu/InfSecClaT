@@ -1,0 +1,43 @@
+\contentsline {section}{\numberline {1}引言和概述(INTRODUCTION AND SUMMARY)}{5}{section.1}%
+\contentsline {section}{\numberline {2}保密系统(SECRECY SYSTEMS)}{10}{section.2}%
+\contentsline {section}{\numberline {3}系统的表示(REPRESENTATION OP SYSTEMS)}{14}{section.3}%
+\contentsline {section}{\numberline {4}保密系统的一些例子(SOME EXAMPLES OF SECRECY SYSTEMS)}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}简单替换密码(Simple Substitution Cipher )}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}换位(固定周期d)(Transposition (Fixed Period d))}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}维吉尼亚及其变种(Vigen\`{e}re and Variations )}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}二元图、三元图和N元图替换(Digram , Trigram and N-gram substitution)}{18}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}单一混合字母表Vigen\`{e}re(Single Mixed Alphabet Vigen\`{e}re )}{18}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}矩阵系统(Matrix System) \footnote {See L . S . Hill ,“ Cryptography in an Algebraic Alphabet , ” American Math . Monthly ,v. 36 , No. 6 , 1 , 1929, pp. 306 -312 ; also “ Concerning Certain Linear Transformation Apparatus of Cryptography , ” v. 38 , No. 3 , 1931 , pp. 135-154 } }{19}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}游乐场密码(The Playfair Cipher)}{19}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}多重混合字母替换(Multiple Mixed Alphabet Substitution)}{20}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}自动密钥密码(Autokey Cipher)}{20}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}分馏密码(Fractional Ciphers)}{20}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}编码(Codes)}{21}{subsection.4.11}%
+\contentsline {section}{\numberline {5}保密系统的评价(VALUATIONS OF SECRECY SYSTEMS)}{22}{section.5}%
+\contentsline {subsection}{\numberline {5.1}保密程度(Amount of Secrecy)}{22}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}密钥大小(Size of Key )}{22}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}加密和解密操作的复杂性(Complexity of Enciphering and Deciphering Operations)}{22}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}错误传播(Propagation of Errors)}{22}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}消息扩展(Expansion of Message)}{23}{subsection.5.5}%
+\contentsline {section}{\numberline {6}保密系统代数(THE ALGEBRA OF SECRECY SYSTEMS)}{24}{section.6}%
+\contentsline {section}{\numberline {7}纯密码和混合密码(PURE AND MIXED CIPHERS)}{27}{section.7}%
+\contentsline {section}{\numberline {8}相似系统(SIMILAR SYSTEMS)}{33}{section.8}%
+\contentsline {section}{\numberline {9}引言(INTRODUCTION)}{34}{section.9}%
+\contentsline {section}{\numberline {10}完全保密(PERFECT SECRECY)}{35}{section.10}%
+\contentsline {section}{\numberline {11}疑义度(EQUIVOCATION)}{40}{section.11}%
+\contentsline {section}{\numberline {12}疑义度性质(PROPERTIES OF EQUIVOCATION)}{44}{section.12}%
+\contentsline {section}{\numberline {13}双字母语言中简单替换的疑义度(EQUIVOCATION FOR SIMPLE SUBSTITUTION ON A TWO LETTER LANGUAGE)}{48}{section.13}%
+\contentsline {section}{\numberline {14}随机密码的疑义度特征(THE EQUIVOCATION CHARACTERISTIC FOR A RANDOM CIPHER)}{50}{section.14}%
+\contentsline {section}{\numberline {15}标准密码的应用(APPLICATION TO STANDARD CIPHERS)}{53}{section.15}%
+\contentsline {section}{\numberline {16}密文方案的有效性(VALIDITY OF A CRYPTOGRAM SOLUTION)}{58}{section.16}%
+\contentsline {section}{\numberline {17}理想保密系统(IDEAL SECRECY SYSTEMS)}{59}{section.17}%
+\contentsline {section}{\numberline {18}理想保密系统的例子(EXAMPLES OF IDEAL SECRECY SYSTEMS)}{62}{section.18}%
+\contentsline {section}{\numberline {19}关于疑义度和冗余的进一步评论(FURTHER REMARKS ON EQUIVOCATION AND REDUNDANCY)}{63}{section.19}%
+\contentsline {section}{\numberline {20}疑义度分布(DISTRIBUTION OF EQUIVOCATION)}{64}{section.20}%
+\contentsline {section}{\numberline {21}工作特性(THE WORK CHARACTERISTIC)}{66}{section.21}%
+\contentsline {section}{\numberline {22}密文解的一般性讨论(GENERALITIES ON THE SOLUTION OF CRYPTOGRAMS)}{69}{section.22}%
+\contentsline {section}{\numberline {23}统计方法(STATISTICAL METHODS)}{72}{section.23}%
+\contentsline {section}{\numberline {24}可能词方法(THE PROBABLE WORD METHOD)}{75}{section.24}%
+\contentsline {section}{\numberline {25}混合变换(MIXING TRANSFORMATIONS)}{77}{section.25}%
+\contentsline {section}{\numberline {26}$T_k F S_j$类型密码(CIPHERS OF THE TYPE $T_k F S_j$)}{79}{section.26}%
+\contentsline {section}{\numberline {27}好系统标准的不兼容性(INCOMPATIBILITY OF THE CRITERIA FOR GOOD SYSTEMS)}{80}{section.27}%
